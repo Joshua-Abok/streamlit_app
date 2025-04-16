@@ -16,3 +16,10 @@ hobby = streamlit.text_input("What's your favorite hobby?")
 if streamlit.button("Greet Me"):
     streamlit.success(f"Hello, {name}! Have fun with your hobby: {hobby}")
 
+streamlit.header("🍎 Fruit List Viewer")
+positions = [1, 2, 3]
+fruits = ['mango', 'apple', 'guava', 'pineapple']
+
+if streamlit.button("Show Fruits"):
+    for pos, fruit in zip(positions, fruits):
+        streamlit.write(f"In position {pos}, we have: {fruit}")
